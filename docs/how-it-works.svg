@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" width="720" height="360" role="img"
+     aria-label="Top-down view: the head faces the laptop at yaw 0°, so it stays sharp; the monitor at yaw −40° is blurred. The blur only moves once the head passes the midpoint, −20°, by more than 4°.">
+  <defs>
+    <filter id="blur" x="-20%" y="-200%" width="140%" height="500%">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+  </defs>
+  <style>
+    text { font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; fill: #57606a; }
+    .label { font-weight: 600; fill: #1f2328; }
+  </style>
+
+  <!-- self-contained light card, so it reads the same on light and dark pages -->
+  <rect x="0.5" y="0.5" width="719" height="359" rx="10" fill="#f6f8fa" stroke="#d0d7de"/>
+
+  <!-- no-switch band: midpoint between the screens' yaws, ±4° -->
+  <path d="M360 300 L343 61 L377 61 Z" fill="#0969da" opacity="0.1"/>
+  <line x1="360" y1="300" x2="360" y2="54" stroke="#8c959f" stroke-dasharray="4 4"/>
+  <text x="360" y="42" text-anchor="middle">switch point −20° ± 4°</text>
+
+  <!-- rays from the head to each screen -->
+  <line x1="360" y1="300" x2="284" y2="137" stroke="#0969da" stroke-width="2"/>
+  <line x1="360" y1="300" x2="453" y2="101" stroke="#8c959f" stroke-dasharray="4 4"/>
+
+  <!-- laptop: faced, sharp -->
+  <rect x="229" y="132" width="110" height="10" rx="2" fill="#1f2328" transform="rotate(-25 284 137)"/>
+  <text x="150" y="112" class="label">Laptop</text>
+  <text x="150" y="129">yaw 0° · sharp</text>
+
+  <!-- monitor: not faced, blurred -->
+  <rect x="373" y="95" width="160" height="12" rx="2" fill="#1f2328" opacity="0.55" filter="url(#blur)"
+        transform="rotate(25 453 101)"/>
+  <text x="520" y="80" class="label">Monitor</text>
+  <text x="520" y="97">yaw −40° · blurred</text>
+
+  <!-- head from above, facing the laptop, AirPods at the ears -->
+  <g transform="rotate(-25 360 300)">
+    <path d="M352 284 L360 268 L368 284 Z" fill="#ffffff" stroke="#57606a" stroke-width="1.5"/>
+    <circle cx="360" cy="300" r="18" fill="#ffffff" stroke="#57606a" stroke-width="1.5"/>
+    <circle cx="341" cy="300" r="3.5" fill="#1f2328"/>
+    <circle cx="379" cy="300" r="3.5" fill="#1f2328"/>
+  </g>
+  <text x="360" y="342" text-anchor="middle">Head yaw from the AirPods, seen from above</text>
+
+  <!-- legend -->
+  <line x1="560" y1="262" x2="590" y2="262" stroke="#0969da" stroke-width="2"/>
+  <text x="598" y="266">facing</text>
+  <rect x="560" y="282" width="30" height="12" fill="#0969da" opacity="0.1"/>
+  <text x="598" y="293">no-switch band</text>
+</svg>
