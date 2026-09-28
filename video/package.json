@@ -1,0 +1,21 @@
+{
+  "name": "blink-video",
+  "private": true,
+  "description": "The Blink demo video, made with Remotion.",
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "sounds": "python3 scripts/sounds.py",
+    "render": "remotion render src/index.ts Blink out/blink.mp4 --codec=h264 --crf=16",
+    "gif": "sh scripts/gif.sh"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.529",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "remotion": "4.0.529"
+  },
+  "devDependencies": {
+    "@types/react": "19.3.0",
+    "typescript": "7.0.2"
+  }
+}
