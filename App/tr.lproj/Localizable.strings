@@ -1,0 +1,25 @@
+/* Status */
+"AirPods not connected" = "AirPods bağlı değil";
+"Waiting…" = "Bekleniyor…";
+"Looking at: %@" = "Bakılan: %@";
+"%@ · learning, type a bit" = "%@ · öğreniyor, biraz yaz";
+"%@ · light blur" = "%@ · hafif blur";
+
+/* Menu */
+"On (⌃⌥⌘B)" = "Açık (⌃⌥⌘B)";
+"Recenter (⌃⌥⌘R)" = "Yeniden ortala (⌃⌥⌘R)";
+"Calibrate…" = "Kalibre et…";
+"Learn while typing" = "Yazarken otomatik öğren";
+"Lock when I walk away" = "Masadan kalkınca kilitle";
+"Blur strength: %lld" = "Blur şiddeti: %lld";
+"Reaction time: %@ s" = "Tepki süresi: %@ sn";
+"Launch at login" = "Mac açılınca başlat";
+"Quit" = "Çık";
+"Couldn't change launch at login" = "Açılışta başlatma ayarlanamadı";
+"%@\n\nInstall the app with `scripts/build-app.sh --install` and try again." = "%@\n\nUygulamayı `scripts/build-app.sh --install` ile kurup tekrar dene.";
+
+/* Calibration */
+"Look at the center of this screen\n%lld" = "Bu ekranın ortasına bak\n%lld";
+
+/* Walk-away lock */
+"Walked away, locking in %lld s\nMove the mouse to cancel" = "Masadan kalktın, %lld sn içinde kilitleniyor\nİptal için fareyi oynat";
